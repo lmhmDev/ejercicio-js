@@ -26,29 +26,9 @@ export default class League {
     }
 
     playLeague(teams) {
-        const winners = [];
         console.log('COMIENZA LA ELIMINATORIA\n');
 
-        for (let i = 0; i < teams.length; i++) {
-            const team1 = teams[i];
-            i++;
-            const team2 = teams[i];
-            const points1 = generateRandom();
-            const points2 = generateRandom();
-            let winner = '';
-
-            if (points1 > points2) {
-                winner = team1;
-            } else {
-                winner = team2;
-            }
-
-            winners.push(winner);
-
-            console.log(`${team1} ${points1} | ${points2} ${team2} => ${winner}`);
-        }
-
-        this.playOctavos(winners);
+        this.playOctavos(teams);
     }
 
     playOctavos(teams) {
