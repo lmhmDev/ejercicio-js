@@ -39,8 +39,13 @@ export default class League {
             const team1 = teams[i];
             i++;
             const team2 = teams[i];
-            const points1 = generateRandom();
-            const points2 = generateRandom();
+            let points1 = -1;
+            let points2 = -1;
+            while (points1 == points2) {
+                points1 = generateRandom();
+                points2 = generateRandom();
+            }
+
             let winner = '';
 
             if (points1 > points2) {
@@ -65,8 +70,12 @@ export default class League {
             const team1 = teams[i];
             i++;
             const team2 = teams[i];
-            const points1 = generateRandom();
-            const points2 = generateRandom();
+            let points1 = -1;
+            let points2 = -1;
+            while (points1 == points2) {
+                points1 = generateRandom();
+                points2 = generateRandom();
+            }
             let winner = '';
 
             if (points1 > points2) {
@@ -92,8 +101,12 @@ export default class League {
             const team1 = teams[i];
             i++;
             const team2 = teams[i];
-            const points1 = generateRandom();
-            const points2 = generateRandom();
+            let points1 = -1;
+            let points2 = -1;
+            while (points1 == points2) {
+                points1 = generateRandom();
+                points2 = generateRandom();
+            }
             let winner = '';
             let loser = '';
 
@@ -119,8 +132,12 @@ export default class League {
         console.log(`\n------ 3º Y 4º PUESTO ------\n`);
         let team1 = losers[0];
         let team2 = losers[1];
-        let points1 = generateRandom();
-        let points2 = generateRandom();
+        let points1 = -1;
+        let points2 = -1;
+        while (points1 == points2) {
+            points1 = generateRandom();
+            points2 = generateRandom();
+        }
         let third = '';
         let fourth = '';
 
@@ -139,8 +156,11 @@ export default class League {
 
         team1 = finalists[0];
         team2 = finalists[1];
-        points1 = generateRandom();
-        points2 = generateRandom();
+        do {
+            points1 = generateRandom();
+            points2 = generateRandom();
+        } while (points1 == points2);
+
         let first = '';
         let second = '';
 
